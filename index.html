@@ -189,7 +189,7 @@
                                 </svg>
                                 </button>
                                 
-                                <div id="dropdownRadioHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60">
+                                <div id="dropdownRadioHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24">
                                     <ul class="p-3 space-y-1 text-sm text-gray-700" aria-labelledby="dropdownRadioHelperButton">
                                       <li>
                                         <div class="flex p-2 rounded hover:bg-gray-100 ">
@@ -463,9 +463,13 @@
                     </div>
                 </div>
 
+                <div class="title-trainer flex items-center justify-center mt-7">
+                    <p class="font-bold text-xl uppercase">Выберите вектор профессионального развития</p>
+                </div>
+
                 <div class="flex flex-col mt-7 relative">
                     <div class="title-trainer">
-                        <p class="font-medium text-xl mb-1">Выберите курс и начните обучение</p>
+                        <p class="font-medium text-xl mb-1">Курсы</p>
                         <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
                         </svg>
@@ -512,8 +516,8 @@
                             </div>
 
                             <div class="info_zap mt-7 flex items-start justify-center">
-                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
-                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-3 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-3 hover:bg-white hover:transition-all hover:duration-500">
                                     <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -563,7 +567,7 @@
                             </div>
 
                             <div class="info_zap mt-7 flex items-start justify-center">
-                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-3 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
                                 <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
                                     <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -797,7 +801,7 @@
 
                 <div class="flex flex-col mt-10 relative">
                     <div class="title-trainer">
-                        <p class="font-medium text-xl mb-1">Выберите тему и начните обучение</p>
+                        <p class="font-medium text-xl mb-1">Семинары</p>
                         <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
                         </svg>
@@ -1423,6 +1427,16 @@
                         autoplay:false,  
                         responsive: [
                         {
+                        breakpoint: 1280,
+                        settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrow:false,
+                        autoplay:true,  
+                        //autoplay:true,
+                        },
+                        },
+                        {
                             breakpoint: 1025,
                             settings: {
                             slidesToShow: 1,
@@ -1430,7 +1444,7 @@
                             arrow:false,
                             autoplay:true,  
                             //autoplay:true,
-                        }
+                        },
                         },
                         {
                             breakpoint: 575,
