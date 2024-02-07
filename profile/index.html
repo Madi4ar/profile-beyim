@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js" defer></script>
+    <title>Profile</title>
+</head>
+<style>
+    .active {
+        background:#39A2D1 !important;
+        display:flex;
+    }
+    .active p {
+        color:white;
+    }
+    .active svg {
+        fill:white;
+    }
+    .active svg path{
+        fill:white;
+    }
+    .tabcontent {
+        animation: fadeEffect 1s; 
+    }
+
+    @keyframes fadeEffect {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    .course-slider .slick-slide { margin: 10px 10px;}
+    .seminar-slider .slick-slide { margin: 10px 10px;}
+    .slick-dots {
+        width: 600px;
+        display:flex;
+        padding-left: 30px;
+    }
+    .course-slider .slick-dots {
+        padding-left: 10px;
+    }
+     .slick-dots li button:before
+    {
+        font-size: 10px;
+        line-height: 20px;
+    }
+ 
+     .slick-dots li button {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .slick-dots li {
+        width: 10px;
+        height: 10px;
+        background: #CBDCE7;
+        border:  2px solid #CBDCE7;
+        border-radius: 50%;
+    }
+
+     .slick-dots li button::before {
+        display: none;
+    }
+
+     .slick-dots li.slick-active {
+        width: 10px;
+        height: 10px;
+        background: #232F37;
+        border-color: #232F37;
+    }
+    .slider ul.slick-dots {
+        bottom: 40px; 
+    }
+    .course-slider ul.slick-dots {
+        bottom:-40px;
+    }
+    .seminar-slider ul.slick-dots {
+        bottom:-40px;
+        padding-left: 0;
+    }
+    .arrowz .slick-disabled svg path {
+        fill:#CBDCE7;
+        stroke: #232F37;
+    }
+   
+</style>
+<body class="bg-[#E9F0F3]">
+ <div class="trainer-profile">
+    <div class="container mx-auto p-2 md:p-2">
+        <div class="trainer-wrap flex flex-wrap justify-between">
+            <div class="trainer-small-about w-full lg:w-1/4 flex flex-col">
+                <div class="sticky top-0">
+                <div class="flex flex-col">
+                <div class="relative flex flex-col items-center p-[25px_61px] bg-white rounded-t-xl">
+                    <div class="user_ava flex flex-col items-center justify-center">
+                        <div class="round-image w-[120px] h-[120px] rounded-[50%] overflow-hidden flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="https://beyim.edu.kz/storage/2023/06/02/WA4pfXG9Y4HWTl0w3DXGo8BSTpDu2nyTeeT5giHy.jpg" alt="">
+                        </div>
+                        <p class="font-bold text-xl mt-3">Нуржан Талипов</p>
+                        <div class="flex items-center">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_198_16" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="12" height="12">
+                                <rect width="12" height="12" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_198_16)">
+                                <path d="M6 6C6.275 6 6.51042 5.90208 6.70625 5.70625C6.90208 5.51042 7 5.275 7 5C7 4.725 6.90208 4.48958 6.70625 4.29375C6.51042 4.09792 6.275 4 6 4C5.725 4 5.48958 4.09792 5.29375 4.29375C5.09792 4.48958 5 4.725 5 5C5 5.275 5.09792 5.51042 5.29375 5.70625C5.48958 5.90208 5.725 6 6 6ZM6 9.675C7.01667 8.74167 7.77083 7.89375 8.2625 7.13125C8.75417 6.36875 9 5.69167 9 5.1C9 4.19167 8.71042 3.44792 8.13125 2.86875C7.55208 2.28958 6.84167 2 6 2C5.15833 2 4.44792 2.28958 3.86875 2.86875C3.28958 3.44792 3 4.19167 3 5.1C3 5.69167 3.24583 6.36875 3.7375 7.13125C4.22917 7.89375 4.98333 8.74167 6 9.675ZM6 11C4.65833 9.85833 3.65625 8.79792 2.99375 7.81875C2.33125 6.83958 2 5.93333 2 5.1C2 3.85 2.40208 2.85417 3.20625 2.1125C4.01042 1.37083 4.94167 1 6 1C7.05833 1 7.98958 1.37083 8.79375 2.1125C9.59792 2.85417 10 3.85 10 5.1C10 5.93333 9.66875 6.83958 9.00625 7.81875C8.34375 8.79792 7.34167 9.85833 6 11Z" fill="#1D1D1D"/>
+                                </g>
+                            </svg>
+                            <p class="text-base ml-1 text-[#1D1D1D]">Астана</p>    
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="rating flex absolute right-5 top-5 items-center">
+                        <p class="text-base font-medium mr-1">5.0</p>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_228_737)">
+                            <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_228_737">
+                            <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="flex flex-col bg-white rounded-b-xl pb-6">
+                    <div class="title-profile py-4">
+                        <p class="text-[#36A0D0] px-6 py-2 text-base font-medium border-b border-[#E6F6FF]">О себе</p>
+                    </div>
+
+                    <div class="tabs flex flex-col items-center">
+                            <div class="flex flex-col px-4 mt-3 w-full lg:w-52 xl:w-80">
+                                <div class="flex p-3 rounded-xl cursor-pointer w-full bg-[#E6F6FF] main tablinks items-center active">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="F9FAFB" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_104_65" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                        <rect width="24" height="24" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_104_65)">
+                                        <path d="M5.85 17.1C6.7 16.45 7.65 15.9375 8.7 15.5625C9.75 15.1875 10.85 15 12 15C13.15 15 14.25 15.1875 15.3 15.5625C16.35 15.9375 17.3 16.45 18.15 17.1C18.7333 16.4167 19.1875 15.6417 19.5125 14.775C19.8375 13.9083 20 12.9833 20 12C20 9.78333 19.2208 7.89583 17.6625 6.3375C16.1042 4.77917 14.2167 4 12 4C9.78333 4 7.89583 4.77917 6.3375 6.3375C4.77917 7.89583 4 9.78333 4 12C4 12.9833 4.1625 13.9083 4.4875 14.775C4.8125 15.6417 5.26667 16.4167 5.85 17.1ZM12 13C11.0167 13 10.1875 12.6625 9.5125 11.9875C8.8375 11.3125 8.5 10.4833 8.5 9.5C8.5 8.51667 8.8375 7.6875 9.5125 7.0125C10.1875 6.3375 11.0167 6 12 6C12.9833 6 13.8125 6.3375 14.4875 7.0125C15.1625 7.6875 15.5 8.51667 15.5 9.5C15.5 10.4833 15.1625 11.3125 14.4875 11.9875C13.8125 12.6625 12.9833 13 12 13ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C12.8833 20 13.7167 19.8708 14.5 19.6125C15.2833 19.3542 16 18.9833 16.65 18.5C16 18.0167 15.2833 17.6458 14.5 17.3875C13.7167 17.1292 12.8833 17 12 17C11.1167 17 10.2833 17.1292 9.5 17.3875C8.71667 17.6458 8 18.0167 7.35 18.5C8 18.9833 8.71667 19.3542 9.5 19.6125C10.2833 19.8708 11.1167 20 12 20ZM12 11C12.4333 11 12.7917 10.8583 13.075 10.575C13.3583 10.2917 13.5 9.93333 13.5 9.5C13.5 9.06667 13.3583 8.70833 13.075 8.425C12.7917 8.14167 12.4333 8 12 8C11.5667 8 11.2083 8.14167 10.925 8.425C10.6417 8.70833 10.5 9.06667 10.5 9.5C10.5 9.93333 10.6417 10.2917 10.925 10.575C11.2083 10.8583 11.5667 11 12 11Z" fill="#6B7280"/>
+                                        </g>
+                                    </svg>
+                                    <p class="ml-2 text-[#6B7280] font-semibold">Профиль</p>
+                                </div>
+                            </div>
+        
+                            <div class="flex flex-col px-4 mt-3 w-full lg:w-52 xl:w-80">
+                                <div class="flex group hover:bg-[#39A2D1] holi transition-all duration-500 bg-[#E6F6FF] p-3 rounded-xl cursor-pointer w-full tablinks items-center job">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_104_79" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                        <rect width="24" height="24" class="group-hover:fill-white" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_104_79)">
+                                        <path class="group-hover:fill-white" d="M4 21C3.45 21 2.97917 20.8042 2.5875 20.4125C2.19583 20.0208 2 19.55 2 19V8C2 7.45 2.19583 6.97917 2.5875 6.5875C2.97917 6.19583 3.45 6 4 6H8V4C8 3.45 8.19583 2.97917 8.5875 2.5875C8.97917 2.19583 9.45 2 10 2H14C14.55 2 15.0208 2.19583 15.4125 2.5875C15.8042 2.97917 16 3.45 16 4V6H20C20.55 6 21.0208 6.19583 21.4125 6.5875C21.8042 6.97917 22 7.45 22 8V19C22 19.55 21.8042 20.0208 21.4125 20.4125C21.0208 20.8042 20.55 21 20 21H4ZM10 6H14V4H10V6ZM20 15H15V17H9V15H4V19H20V15ZM11 15H13V13H11V15ZM4 13H9V11H15V13H20V8H4V13Z" fill="#6B7280"/>
+                                        </g>
+                                    </svg>
+                                    <p class="ml-2 text-[#6B7280] font-semibold group-hover:text-white">Достижения</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="flex flex-col bg-white rounded-xl pb-6 mt-6">
+                    <div class="title-profile py-4 flex items-center justify-between  border-b border-[#E6F6FF]">
+                        <p class="text-[#36A0D0] px-6 text-base font-medium ">Статистика</p>
+
+                        <div class="dropdown px-6">
+
+                            <button id="dropdownRadioHelperButton" data-dropdown-toggle="dropdownRadioHelper" class="text-white bg-[#36A0D0] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">2024 <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                                </button>
+                                
+                                <div id="dropdownRadioHelper" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60">
+                                    <ul class="p-3 space-y-1 text-sm text-gray-700" aria-labelledby="dropdownRadioHelperButton">
+                                      <li>
+                                        <div class="flex p-2 rounded hover:bg-gray-100 ">
+                                          <div class="flex items-center h-5">
+                                              <input id="helper-radio-4" name="helper-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                          </div>
+                                          <div class="ms-2 text-sm">
+                                              <label for="helper-radio-4" class="font-medium text-gray-900 ">
+                                                <div>2023</div>
+                                              </label>
+                                          </div>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="flex p-2 rounded hover:bg-gray-100">
+                                          <div class="flex items-center h-5">
+                                              <input id="helper-radio-5" name="helper-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
+                                          </div>
+                                          <div class="ms-2 text-sm">
+                                              <label for="helper-radio-5" class="font-medium text-gray-900">
+                                                <div>2022</div>
+                                              </label>
+                                          </div>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div class="flex p-2 rounded hover:bg-gray-100 ">
+                                          <div class="flex items-center h-5">
+                                              <input id="helper-radio-6" name="helper-radio" type="radio" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+                                          </div>
+                                          <div class="ms-2 text-sm">
+                                              <label for="helper-radio-6" class="font-medium text-gray-900">
+                                                <div>2021</div>
+                                              </label>
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                </div>
+                                
+                        </div>
+                    </div>
+
+                    <div class="categories-wrap flex flex-col">
+                        <div class="flex items-center px-6 mt-3">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="#E6F6FF"/>
+                                <mask id="mask0_4111_40" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="6" width="27" height="27">
+                                <rect x="7" y="6" width="27" height="27" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_4111_40)">
+                                <path d="M20.5 29.625L12.625 25.35V18.6L8.125 16.125L20.5 9.375L32.875 16.125V25.125H30.625V17.3625L28.375 18.6V25.35L20.5 29.625ZM20.5 20.2875L28.2063 16.125L20.5 11.9625L12.7938 16.125L20.5 20.2875ZM20.5 27.0656L26.125 24.0281V19.7812L20.5 22.875L14.875 19.7812V24.0281L20.5 27.0656Z" fill="#36A0D0"/>
+                                </g>
+                            </svg>
+
+                            <div class="flex flex-col ml-3">
+                                <p class="font-normal text-base">Проведенных курсов:</p>
+                                <span class="font-bold">250</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center px-6 mt-3">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="#E6F6FF"/>
+                                <mask id="mask0_223_69" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="8" width="24" height="24">
+                                <rect x="8" y="8" width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_223_69)">
+                                <path d="M9 28V25.2C9 24.6333 9.14583 24.1125 9.4375 23.6375C9.72917 23.1625 10.1167 22.8 10.6 22.55C11.6333 22.0333 12.6833 21.6458 13.75 21.3875C14.8167 21.1292 15.9 21 17 21C18.1 21 19.1833 21.1292 20.25 21.3875C21.3167 21.6458 22.3667 22.0333 23.4 22.55C23.8833 22.8 24.2708 23.1625 24.5625 23.6375C24.8542 24.1125 25 24.6333 25 25.2V28H9ZM27 28V25C27 24.2667 26.7958 23.5625 26.3875 22.8875C25.9792 22.2125 25.4 21.6333 24.65 21.15C25.5 21.25 26.3 21.4208 27.05 21.6625C27.8 21.9042 28.5 22.2 29.15 22.55C29.75 22.8833 30.2083 23.2542 30.525 23.6625C30.8417 24.0708 31 24.5167 31 25V28H27ZM17 20C15.9 20 14.9583 19.6083 14.175 18.825C13.3917 18.0417 13 17.1 13 16C13 14.9 13.3917 13.9583 14.175 13.175C14.9583 12.3917 15.9 12 17 12C18.1 12 19.0417 12.3917 19.825 13.175C20.6083 13.9583 21 14.9 21 16C21 17.1 20.6083 18.0417 19.825 18.825C19.0417 19.6083 18.1 20 17 20ZM27 16C27 17.1 26.6083 18.0417 25.825 18.825C25.0417 19.6083 24.1 20 23 20C22.8167 20 22.5833 19.9792 22.3 19.9375C22.0167 19.8958 21.7833 19.85 21.6 19.8C22.05 19.2667 22.3958 18.675 22.6375 18.025C22.8792 17.375 23 16.7 23 16C23 15.3 22.8792 14.625 22.6375 13.975C22.3958 13.325 22.05 12.7333 21.6 12.2C21.8333 12.1167 22.0667 12.0625 22.3 12.0375C22.5333 12.0125 22.7667 12 23 12C24.1 12 25.0417 12.3917 25.825 13.175C26.6083 13.9583 27 14.9 27 16ZM11 26H23V25.2C23 25.0167 22.9542 24.85 22.8625 24.7C22.7708 24.55 22.65 24.4333 22.5 24.35C21.6 23.9 20.6917 23.5625 19.775 23.3375C18.8583 23.1125 17.9333 23 17 23C16.0667 23 15.1417 23.1125 14.225 23.3375C13.3083 23.5625 12.4 23.9 11.5 24.35C11.35 24.4333 11.2292 24.55 11.1375 24.7C11.0458 24.85 11 25.0167 11 25.2V26ZM17 18C17.55 18 18.0208 17.8042 18.4125 17.4125C18.8042 17.0208 19 16.55 19 16C19 15.45 18.8042 14.9792 18.4125 14.5875C18.0208 14.1958 17.55 14 17 14C16.45 14 15.9792 14.1958 15.5875 14.5875C15.1958 14.9792 15 15.45 15 16C15 16.55 15.1958 17.0208 15.5875 17.4125C15.9792 17.8042 16.45 18 17 18Z" fill="#36A0D0"/>
+                                </g>
+                            </svg>
+
+                            <div class="flex flex-col ml-3">
+                                <p class="font-normal text-base">Прошли обучение:</p>
+                                <span class="font-bold">150</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center px-6 mt-3">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="#E6F6FF"/>
+                                <mask id="mask0_223_76" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="8" width="24" height="24">
+                                <rect x="8" y="8" width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_223_76)">
+                                <path d="M14 22H22V20H14V22ZM14 19H26V17H14V19ZM14 16H26V14H14V16ZM10 30V12C10 11.45 10.1958 10.9792 10.5875 10.5875C10.9792 10.1958 11.45 10 12 10H28C28.55 10 29.0208 10.1958 29.4125 10.5875C29.8042 10.9792 30 11.45 30 12V24C30 24.55 29.8042 25.0208 29.4125 25.4125C29.0208 25.8042 28.55 26 28 26H14L10 30ZM13.15 24H28V12H12V25.125L13.15 24Z" fill="#36A0D0"/>
+                                </g>
+                            </svg>
+
+                            <div class="flex flex-col ml-3">
+                                <p class="font-normal text-base">Отзывы:</p>
+                                <span class="font-bold">150</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="flex flex-col bg-white rounded-xl pb-6 mt-6 mt-6 ">
+                    <div class="title-profile py-4 w-full">
+                        <p class="text-[#36A0D0] px-6 py-2 text-base font-medium border-b border-[#E6F6FF]">Контакты</p>
+                    </div>
+
+                    <div class="categories-wrap flex flex-col">
+                        <div class="flex items-center px-6 mt-3">
+                            <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.0249023" width="40" height="40" rx="8" fill="#E6F6FF"/>
+                                <path d="M15.5229 17.749L18.4496 19.5534C19.4154 20.1488 20.6343 20.1488 21.6 19.5534L24.5267 17.749" stroke="#55BBEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="11.0215" y="12.9971" width="18.0075" height="14.0058" rx="3" stroke="#55BBEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <div class="flex flex-col ml-3">
+                                <p class="font-normal text-base">Почта:</p>
+                                <span class="font-bold">mail@mail.kz</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center px-6 mt-3">
+                            <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.0249023" width="40" height="40" rx="8" fill="#E6F6FF"/>
+                                <mask id="mask0_198_75" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="8" width="24" height="24">
+                                <rect x="8" y="8" width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_198_75)">
+                                <path d="M27.95 29C25.8667 29 23.8083 28.5458 21.775 27.6375C19.7417 26.7292 17.8917 25.4417 16.225 23.775C14.5583 22.1083 13.2708 20.2583 12.3625 18.225C11.4542 16.1917 11 14.1333 11 12.05C11 11.75 11.1 11.5 11.3 11.3C11.5 11.1 11.75 11 12.05 11H16.1C16.3333 11 16.5417 11.0792 16.725 11.2375C16.9083 11.3958 17.0167 11.5833 17.05 11.8L17.7 15.3C17.7333 15.5667 17.725 15.7917 17.675 15.975C17.625 16.1583 17.5333 16.3167 17.4 16.45L14.975 18.9C15.3083 19.5167 15.7042 20.1125 16.1625 20.6875C16.6208 21.2625 17.125 21.8167 17.675 22.35C18.1917 22.8667 18.7333 23.3458 19.3 23.7875C19.8667 24.2292 20.4667 24.6333 21.1 25L23.45 22.65C23.6 22.5 23.7958 22.3875 24.0375 22.3125C24.2792 22.2375 24.5167 22.2167 24.75 22.25L28.2 22.95C28.4333 23.0167 28.625 23.1375 28.775 23.3125C28.925 23.4875 29 23.6833 29 23.9V27.95C29 28.25 28.9 28.5 28.7 28.7C28.5 28.9 28.25 29 27.95 29ZM14.025 17L15.675 15.35L15.25 13H13.025C13.1083 13.6833 13.225 14.3583 13.375 15.025C13.525 15.6917 13.7417 16.35 14.025 17ZM22.975 25.95C23.625 26.2333 24.2875 26.4583 24.9625 26.625C25.6375 26.7917 26.3167 26.9 27 26.95V24.75L24.65 24.275L22.975 25.95Z" fill="#55BBEB"/>
+                                </g>
+                            </svg>
+                                
+
+                            <div class="flex flex-col ml-3">
+                                <p class="font-normal text-base">Личный телефон:</p>
+                                <span class="font-bold">+7 777 777 7777</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+            <div class="trainer-big-info w-full lg:w-[73%] mt-3 lg:mt-0">
+            <div class="trainer-our-information w-full flex flex-col bg-white rounded-xl px-6 py-8 tabcontent mainInfo" id="tabcontent">
+                <div class="about-trainer-info">
+                    <div class="title-trainer">
+                        <p class="font-medium text-xl mb-1">О тренере</p>
+                        <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
+                        </svg>
+                    </div>
+
+                    <p class="mt-2 font-normal text-base">
+                        Приветствую всех! Меня зовут [Ваше Имя], и я ваш тренер по [название области или темы]. Рад приветствовать вас в нашем обучающем пространстве!
+                        С момента, как я начал заниматься [название области] много лет назад, моя страсть и интерес к этой сфере только углублялись. Мое образование в области [ваша образовательная специализация] дало мне крепкий фундамент в теоретических аспектах этой области, а опыт работы в [подробности вашего опыта] предоставил практическое понимание и умения, которые я теперь готов(а) передать вам.
+                    </p>
+                </div>
+
+                <div class="flex flex-col mt-5">
+                    <div class="title-trainer">
+                        <p class="font-medium text-xl mb-1">Программы повышения квалификации</p>
+                        <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
+                        </svg>
+                    </div>
+
+                    <div class="bg-[#E6F6FF] rounded-xl p-6 mt-3">
+                        <div class="flex items-start">
+                            <svg class="mt-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4041_73)">
+                                <path d="M5.74377 13.1036C5.60059 13.2476 5.40523 13.3279 5.20231 13.3279C4.99938 13.3279 4.80403 13.2476 4.66085 13.1036L0.336574 8.77858C-0.112191 8.32982 -0.112191 7.60212 0.336574 7.15419L0.878037 6.61259C1.32694 6.16383 2.0538 6.16383 2.50257 6.61259L5.20231 9.31247L12.4974 2.01724C12.9463 1.56847 13.6739 1.56847 14.1219 2.01724L14.6634 2.55884C15.1122 3.00761 15.1122 3.73517 14.6634 4.18323L5.74377 13.1036Z" fill="#39A2D1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4041_73">
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="ml-2 text-base w-full">Повышение квалификации руководителей организаций образования «Менеджмент в образовании»</p>    
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <svg class="mt-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4041_73)">
+                                <path d="M5.74377 13.1036C5.60059 13.2476 5.40523 13.3279 5.20231 13.3279C4.99938 13.3279 4.80403 13.2476 4.66085 13.1036L0.336574 8.77858C-0.112191 8.32982 -0.112191 7.60212 0.336574 7.15419L0.878037 6.61259C1.32694 6.16383 2.0538 6.16383 2.50257 6.61259L5.20231 9.31247L12.4974 2.01724C12.9463 1.56847 13.6739 1.56847 14.1219 2.01724L14.6634 2.55884C15.1122 3.00761 15.1122 3.73517 14.6634 4.18323L5.74377 13.1036Z" fill="#39A2D1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4041_73">
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="ml-2 text-base w-full">Инновационный менеджмент в управлении школой</p>    
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="mt-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4041_73)">
+                                <path d="M5.74377 13.1036C5.60059 13.2476 5.40523 13.3279 5.20231 13.3279C4.99938 13.3279 4.80403 13.2476 4.66085 13.1036L0.336574 8.77858C-0.112191 8.32982 -0.112191 7.60212 0.336574 7.15419L0.878037 6.61259C1.32694 6.16383 2.0538 6.16383 2.50257 6.61259L5.20231 9.31247L12.4974 2.01724C12.9463 1.56847 13.6739 1.56847 14.1219 2.01724L14.6634 2.55884C15.1122 3.00761 15.1122 3.73517 14.6634 4.18323L5.74377 13.1036Z" fill="#39A2D1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4041_73">
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="ml-2 text-base w-full">Урок биологии в школе: фокусы и стратегии улучшений</p>    
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="mt-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4041_73)">
+                                <path d="M5.74377 13.1036C5.60059 13.2476 5.40523 13.3279 5.20231 13.3279C4.99938 13.3279 4.80403 13.2476 4.66085 13.1036L0.336574 8.77858C-0.112191 8.32982 -0.112191 7.60212 0.336574 7.15419L0.878037 6.61259C1.32694 6.16383 2.0538 6.16383 2.50257 6.61259L5.20231 9.31247L12.4974 2.01724C12.9463 1.56847 13.6739 1.56847 14.1219 2.01724L14.6634 2.55884C15.1122 3.00761 15.1122 3.73517 14.6634 4.18323L5.74377 13.1036Z" fill="#39A2D1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4041_73">
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="ml-2 text-base w-full">Развитие предметных компетенций учителей естествознания и биологии</p>    
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="mt-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4041_73)">
+                                <path d="M5.74377 13.1036C5.60059 13.2476 5.40523 13.3279 5.20231 13.3279C4.99938 13.3279 4.80403 13.2476 4.66085 13.1036L0.336574 8.77858C-0.112191 8.32982 -0.112191 7.60212 0.336574 7.15419L0.878037 6.61259C1.32694 6.16383 2.0538 6.16383 2.50257 6.61259L5.20231 9.31247L12.4974 2.01724C12.9463 1.56847 13.6739 1.56847 14.1219 2.01724L14.6634 2.55884C15.1122 3.00761 15.1122 3.73517 14.6634 4.18323L5.74377 13.1036Z" fill="#39A2D1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4041_73">
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="ml-2 text-base w-full">Школьная команда: эффективное управление и качество образования</p>    
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="mt-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4041_73)">
+                                <path d="M5.74377 13.1036C5.60059 13.2476 5.40523 13.3279 5.20231 13.3279C4.99938 13.3279 4.80403 13.2476 4.66085 13.1036L0.336574 8.77858C-0.112191 8.32982 -0.112191 7.60212 0.336574 7.15419L0.878037 6.61259C1.32694 6.16383 2.0538 6.16383 2.50257 6.61259L5.20231 9.31247L12.4974 2.01724C12.9463 1.56847 13.6739 1.56847 14.1219 2.01724L14.6634 2.55884C15.1122 3.00761 15.1122 3.73517 14.6634 4.18323L5.74377 13.1036Z" fill="#39A2D1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4041_73">
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="ml-2 text-base w-full">Лидерство и управление в малокомплектной школе</p>    
+                        </div>
+
+                        <div class="flex items-start">
+                            <svg class="mt-1" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4041_73)">
+                                <path d="M5.74377 13.1036C5.60059 13.2476 5.40523 13.3279 5.20231 13.3279C4.99938 13.3279 4.80403 13.2476 4.66085 13.1036L0.336574 8.77858C-0.112191 8.32982 -0.112191 7.60212 0.336574 7.15419L0.878037 6.61259C1.32694 6.16383 2.0538 6.16383 2.50257 6.61259L5.20231 9.31247L12.4974 2.01724C12.9463 1.56847 13.6739 1.56847 14.1219 2.01724L14.6634 2.55884C15.1122 3.00761 15.1122 3.73517 14.6634 4.18323L5.74377 13.1036Z" fill="#39A2D1"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_4041_73">
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <p class="ml-2 text-base w-full">Кадровый резерв руководителей школ: потенциал и стратегии развития (продвинутый уровень)</p>    
+                        </div>
+
+                        <div class="flex items-center justify-center">
+                           <a href="" class="bg-[#39A2D1] text-lg px-3.5 py-1 text-white rounded-lg mt-3 font-medium border-2 border-[#39A2D1] hover:bg-white hover:text-[#39A2D1] transition-all duration-500">Оставить заявку</a>   
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mt-7 relative">
+                    <div class="title-trainer">
+                        <p class="font-medium text-xl mb-1">Выберите курс и начните обучение</p>
+                        <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
+                        </svg>
+                    </div>
+
+                    <div class="course-slider mt-3 slider">
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrowz hidden md:flex flex absolute right-0 top-0">
+                        <div class="prev-btns cursor-pointer slick-disabled">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M40 28C40 34.6274 34.6274 40 28 40L12 40C5.37259 40 4.69686e-07 34.6274 1.04907e-06 28L2.44784e-06 12C3.02722e-06 5.37258 5.37259 -3.02722e-06 12 -2.44784e-06L28 -1.04907e-06C34.6274 -4.69686e-07 40 5.37259 40 12L40 28Z" fill="#232F37"></path>
+                                <path d="M22 16L18 20L22 24" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+        
+                        <div class="next-btns ml-2 cursor-pointer">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12C0 5.37258 5.37258 0 12 0H28C34.6274 0 40 5.37258 40 12V28C40 34.6274 34.6274 40 28 40H12C5.37258 40 0 34.6274 0 28V12Z" fill="#232F37"></path>
+                                <path d="M18 24L22 20L18 16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                                
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col mt-10 relative">
+                    <div class="title-trainer">
+                        <p class="font-medium text-xl mb-1">Выберите тему и начните обучение</p>
+                        <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
+                        </svg>
+                    </div>
+
+                    <div class="seminar-slider mt-3 slider">
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="flex items-center">
+                                    <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_590" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_590)">
+                                        <path d="M2.66683 14.0002C2.30016 14.0002 1.98627 13.8696 1.72516 13.6085C1.46405 13.3474 1.3335 13.0335 1.3335 12.6668V5.3335C1.3335 4.96683 1.46405 4.65294 1.72516 4.39183C1.98627 4.13072 2.30016 4.00016 2.66683 4.00016H5.3335V2.66683C5.3335 2.30016 5.46405 1.98627 5.72516 1.72516C5.98627 1.46405 6.30016 1.3335 6.66683 1.3335H9.3335C9.70016 1.3335 10.0141 1.46405 10.2752 1.72516C10.5363 1.98627 10.6668 2.30016 10.6668 2.66683V4.00016H13.3335C13.7002 4.00016 14.0141 4.13072 14.2752 4.39183C14.5363 4.65294 14.6668 4.96683 14.6668 5.3335V12.6668C14.6668 13.0335 14.5363 13.3474 14.2752 13.6085C14.0141 13.8696 13.7002 14.0002 13.3335 14.0002H2.66683ZM6.66683 4.00016H9.3335V2.66683H6.66683V4.00016ZM13.3335 10.0002H10.0002V11.3335H6.00016V10.0002H2.66683V12.6668H13.3335V10.0002ZM7.3335 10.0002H8.66683V8.66683H7.3335V10.0002ZM2.66683 8.66683H6.00016V7.3335H10.0002V8.66683H13.3335V5.3335H2.66683V8.66683Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Семинар</p>    
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_564)">
+                                        <path d="M8.6 12.0334L6.7 7.41173L2 5.5434V4.62562L14 0.233398L9.53333 12.0334H8.6ZM9.03333 9.60784L11.7333 2.46229L4.46667 5.11729L7.73333 6.39562L9.03333 9.60784Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Астана</p>    
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="flex items-center">
+                                    <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_590" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_590)">
+                                        <path d="M2.66683 14.0002C2.30016 14.0002 1.98627 13.8696 1.72516 13.6085C1.46405 13.3474 1.3335 13.0335 1.3335 12.6668V5.3335C1.3335 4.96683 1.46405 4.65294 1.72516 4.39183C1.98627 4.13072 2.30016 4.00016 2.66683 4.00016H5.3335V2.66683C5.3335 2.30016 5.46405 1.98627 5.72516 1.72516C5.98627 1.46405 6.30016 1.3335 6.66683 1.3335H9.3335C9.70016 1.3335 10.0141 1.46405 10.2752 1.72516C10.5363 1.98627 10.6668 2.30016 10.6668 2.66683V4.00016H13.3335C13.7002 4.00016 14.0141 4.13072 14.2752 4.39183C14.5363 4.65294 14.6668 4.96683 14.6668 5.3335V12.6668C14.6668 13.0335 14.5363 13.3474 14.2752 13.6085C14.0141 13.8696 13.7002 14.0002 13.3335 14.0002H2.66683ZM6.66683 4.00016H9.3335V2.66683H6.66683V4.00016ZM13.3335 10.0002H10.0002V11.3335H6.00016V10.0002H2.66683V12.6668H13.3335V10.0002ZM7.3335 10.0002H8.66683V8.66683H7.3335V10.0002ZM2.66683 8.66683H6.00016V7.3335H10.0002V8.66683H13.3335V5.3335H2.66683V8.66683Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Семинар</p>    
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_564)">
+                                        <path d="M8.6 12.0334L6.7 7.41173L2 5.5434V4.62562L14 0.233398L9.53333 12.0334H8.6ZM9.03333 9.60784L11.7333 2.46229L4.46667 5.11729L7.73333 6.39562L9.03333 9.60784Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Астана</p>    
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">УПодробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="flex items-center">
+                                    <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_590" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_590)">
+                                        <path d="M2.66683 14.0002C2.30016 14.0002 1.98627 13.8696 1.72516 13.6085C1.46405 13.3474 1.3335 13.0335 1.3335 12.6668V5.3335C1.3335 4.96683 1.46405 4.65294 1.72516 4.39183C1.98627 4.13072 2.30016 4.00016 2.66683 4.00016H5.3335V2.66683C5.3335 2.30016 5.46405 1.98627 5.72516 1.72516C5.98627 1.46405 6.30016 1.3335 6.66683 1.3335H9.3335C9.70016 1.3335 10.0141 1.46405 10.2752 1.72516C10.5363 1.98627 10.6668 2.30016 10.6668 2.66683V4.00016H13.3335C13.7002 4.00016 14.0141 4.13072 14.2752 4.39183C14.5363 4.65294 14.6668 4.96683 14.6668 5.3335V12.6668C14.6668 13.0335 14.5363 13.3474 14.2752 13.6085C14.0141 13.8696 13.7002 14.0002 13.3335 14.0002H2.66683ZM6.66683 4.00016H9.3335V2.66683H6.66683V4.00016ZM13.3335 10.0002H10.0002V11.3335H6.00016V10.0002H2.66683V12.6668H13.3335V10.0002ZM7.3335 10.0002H8.66683V8.66683H7.3335V10.0002ZM2.66683 8.66683H6.00016V7.3335H10.0002V8.66683H13.3335V5.3335H2.66683V8.66683Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Семинар</p>    
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_564)">
+                                        <path d="M8.6 12.0334L6.7 7.41173L2 5.5434V4.62562L14 0.233398L9.53333 12.0334H8.6ZM9.03333 9.60784L11.7333 2.46229L4.46667 5.11729L7.73333 6.39562L9.03333 9.60784Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Астана</p>    
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="flex items-center">
+                                    <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_590" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_590)">
+                                        <path d="M2.66683 14.0002C2.30016 14.0002 1.98627 13.8696 1.72516 13.6085C1.46405 13.3474 1.3335 13.0335 1.3335 12.6668V5.3335C1.3335 4.96683 1.46405 4.65294 1.72516 4.39183C1.98627 4.13072 2.30016 4.00016 2.66683 4.00016H5.3335V2.66683C5.3335 2.30016 5.46405 1.98627 5.72516 1.72516C5.98627 1.46405 6.30016 1.3335 6.66683 1.3335H9.3335C9.70016 1.3335 10.0141 1.46405 10.2752 1.72516C10.5363 1.98627 10.6668 2.30016 10.6668 2.66683V4.00016H13.3335C13.7002 4.00016 14.0141 4.13072 14.2752 4.39183C14.5363 4.65294 14.6668 4.96683 14.6668 5.3335V12.6668C14.6668 13.0335 14.5363 13.3474 14.2752 13.6085C14.0141 13.8696 13.7002 14.0002 13.3335 14.0002H2.66683ZM6.66683 4.00016H9.3335V2.66683H6.66683V4.00016ZM13.3335 10.0002H10.0002V11.3335H6.00016V10.0002H2.66683V12.6668H13.3335V10.0002ZM7.3335 10.0002H8.66683V8.66683H7.3335V10.0002ZM2.66683 8.66683H6.00016V7.3335H10.0002V8.66683H13.3335V5.3335H2.66683V8.66683Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Семинар</p>    
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_564)">
+                                        <path d="M8.6 12.0334L6.7 7.41173L2 5.5434V4.62562L14 0.233398L9.53333 12.0334H8.6ZM9.03333 9.60784L11.7333 2.46229L4.46667 5.11729L7.73333 6.39562L9.03333 9.60784Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Астана</p>    
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="flex items-center">
+                                    <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_590" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_590)">
+                                        <path d="M2.66683 14.0002C2.30016 14.0002 1.98627 13.8696 1.72516 13.6085C1.46405 13.3474 1.3335 13.0335 1.3335 12.6668V5.3335C1.3335 4.96683 1.46405 4.65294 1.72516 4.39183C1.98627 4.13072 2.30016 4.00016 2.66683 4.00016H5.3335V2.66683C5.3335 2.30016 5.46405 1.98627 5.72516 1.72516C5.98627 1.46405 6.30016 1.3335 6.66683 1.3335H9.3335C9.70016 1.3335 10.0141 1.46405 10.2752 1.72516C10.5363 1.98627 10.6668 2.30016 10.6668 2.66683V4.00016H13.3335C13.7002 4.00016 14.0141 4.13072 14.2752 4.39183C14.5363 4.65294 14.6668 4.96683 14.6668 5.3335V12.6668C14.6668 13.0335 14.5363 13.3474 14.2752 13.6085C14.0141 13.8696 13.7002 14.0002 13.3335 14.0002H2.66683ZM6.66683 4.00016H9.3335V2.66683H6.66683V4.00016ZM13.3335 10.0002H10.0002V11.3335H6.00016V10.0002H2.66683V12.6668H13.3335V10.0002ZM7.3335 10.0002H8.66683V8.66683H7.3335V10.0002ZM2.66683 8.66683H6.00016V7.3335H10.0002V8.66683H13.3335V5.3335H2.66683V8.66683Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Семинар</p>    
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_564)">
+                                        <path d="M8.6 12.0334L6.7 7.41173L2 5.5434V4.62562L14 0.233398L9.53333 12.0334H8.6ZM9.03333 9.60784L11.7333 2.46229L4.46667 5.11729L7.73333 6.39562L9.03333 9.60784Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Астана</p>    
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="course bg-white shadow-[0_4px_20px_0_rgba(24,41,189,0.13)] w-80 py-5 px-3 mt-3 rounded-lg">
+                            <div class="status-with-grade flex items-center justify-between">
+                                <div class="flex">
+                                    <div class="info_st flex items-center justify-between bg-[#FFF5E2] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#E5961F]">Онлайн</p>
+                                    </div>
+                                    <div class="info_st ml-2 flex items-center justify-between bg-[#ECFCE4] p-2 rounded-lg">
+                                        <p class="text-sm font-semibold text-[#65A845]">Идет набор</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="font-medium">5.0</p>
+                                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_204_359)">
+                                        <path d="M7.65023 2.22408C7.71984 2.10464 7.81954 2.00554 7.93939 1.93667C8.05925 1.86779 8.19507 1.83154 8.33331 1.83154C8.47155 1.83154 8.60737 1.86779 8.72723 1.93667C8.84708 2.00554 8.94679 2.10464 9.01639 2.22408L10.7842 5.25871L14.2173 6.00251C14.3523 6.03185 14.4773 6.09608 14.5798 6.18879C14.6823 6.28151 14.7586 6.39946 14.8013 6.5309C14.844 6.66233 14.8515 6.80266 14.823 6.93789C14.7946 7.07313 14.7312 7.19853 14.6391 7.30162L12.299 9.92071L12.6531 13.4152C12.6671 13.5528 12.6447 13.6916 12.5883 13.8179C12.5318 13.9441 12.4432 14.0533 12.3313 14.1346C12.2194 14.2159 12.0881 14.2665 11.9506 14.2812C11.8131 14.2959 11.6741 14.2742 11.5476 14.2184L8.33331 12.8017L5.11906 14.2184C4.99251 14.2742 4.85353 14.2959 4.71601 14.2812C4.57849 14.2665 4.44723 14.2159 4.33533 14.1346C4.22344 14.0533 4.13483 13.9441 4.07835 13.8179C4.02188 13.6916 3.99951 13.5528 4.01348 13.4152L4.36767 9.92071L2.0275 7.30225C1.9353 7.19917 1.87176 7.07372 1.8432 6.9384C1.81465 6.80308 1.8221 6.66265 1.86479 6.53111C1.90748 6.39957 1.98394 6.28153 2.08651 6.18877C2.18909 6.09602 2.3142 6.03179 2.44936 6.00251L5.88246 5.25871L7.65023 2.22408Z" fill="#FFC700"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_204_359">
+                                        <rect width="15.1795" height="15.1795" fill="white" transform="translate(0.743652 0.410156)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <p class="text-base font-semibold mt-3">Повышение квалификации руководителей организаций образования Менеджмент в образовании</p>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="flex items-center">
+                                    <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_590" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_590)">
+                                        <path d="M2.66683 14.0002C2.30016 14.0002 1.98627 13.8696 1.72516 13.6085C1.46405 13.3474 1.3335 13.0335 1.3335 12.6668V5.3335C1.3335 4.96683 1.46405 4.65294 1.72516 4.39183C1.98627 4.13072 2.30016 4.00016 2.66683 4.00016H5.3335V2.66683C5.3335 2.30016 5.46405 1.98627 5.72516 1.72516C5.98627 1.46405 6.30016 1.3335 6.66683 1.3335H9.3335C9.70016 1.3335 10.0141 1.46405 10.2752 1.72516C10.5363 1.98627 10.6668 2.30016 10.6668 2.66683V4.00016H13.3335C13.7002 4.00016 14.0141 4.13072 14.2752 4.39183C14.5363 4.65294 14.6668 4.96683 14.6668 5.3335V12.6668C14.6668 13.0335 14.5363 13.3474 14.2752 13.6085C14.0141 13.8696 13.7002 14.0002 13.3335 14.0002H2.66683ZM6.66683 4.00016H9.3335V2.66683H6.66683V4.00016ZM13.3335 10.0002H10.0002V11.3335H6.00016V10.0002H2.66683V12.6668H13.3335V10.0002ZM7.3335 10.0002H8.66683V8.66683H7.3335V10.0002ZM2.66683 8.66683H6.00016V7.3335H10.0002V8.66683H13.3335V5.3335H2.66683V8.66683Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Семинар</p>    
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_226_564" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                        <rect width="16" height="16" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_226_564)">
+                                        <path d="M8.6 12.0334L6.7 7.41173L2 5.5434V4.62562L14 0.233398L9.53333 12.0334H8.6ZM9.03333 9.60784L11.7333 2.46229L4.46667 5.11729L7.73333 6.39562L9.03333 9.60784Z" fill="#55BBEB"/>
+                                        </g>
+                                    </svg>
+                                    <p class="text-base font-medium text-[#55BBEB] ml-1">Астана</p>    
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-7">
+                                <div class="info_st flex items-center justify-between bg-[#E4F3FB] p-2 rounded-lg">
+                                    <p class="text-sm font-semibold text-[#36A0D0]">Старт:</p>
+                                    <span class="ml-1 text-base font-semibold" style="color:#19B2DD">
+                                        05.02.2024
+                                    </span>
+                                </div>
+
+                                <p class="font-medium">22 000 тг</p>
+                            </div>
+
+                            <div class="info_zap mt-7 flex items-start justify-center">
+                                <a href="https://beyim.edu.kz/catalog/courses/40" class="group sm: text-base sm: px-4 sm: py-2.5 sm: items-center rounded-lg text-[#36A0D0] border-2 border-[#36A0D0]  hover:bg-[#36A0D0] hover:text-white hover:transition-all hover:duration-500">Подробнее</a>
+                                <a href="https://beyim.edu.kz/join-group/10-40-8973-24-54588d53" class="group sm: items-center !p-[10px_16px_10px_16px]  flex ml-2.5 bg-[#36A0D0] border-2 border-[#36A0D0] rounded-lg py-2.5 px-4 hover:bg-white hover:transition-all hover:duration-500">
+                                    <p class="sm: text-base text-white group-hover:text-[#36A0D0]">Записаться</p>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="group-hover:stroke-[#36A0D0]" d="M10 16L14 12L10 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrowz hidden md:flex flex absolute right-0 top-0">
+                        <div class="prev-btn cursor-pointer slick-disabled">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M40 28C40 34.6274 34.6274 40 28 40L12 40C5.37259 40 4.69686e-07 34.6274 1.04907e-06 28L2.44784e-06 12C3.02722e-06 5.37258 5.37259 -3.02722e-06 12 -2.44784e-06L28 -1.04907e-06C34.6274 -4.69686e-07 40 5.37259 40 12L40 28Z" fill="#232F37"></path>
+                                <path d="M22 16L18 20L22 24" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+        
+                        <div class="next-btn ml-2 cursor-pointer">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 12C0 5.37258 5.37258 0 12 0H28C34.6274 0 40 5.37258 40 12V28C40 34.6274 34.6274 40 28 40H12C5.37258 40 0 34.6274 0 28V12Z" fill="#232F37"></path>
+                                <path d="M18 24L22 20L18 16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                                
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="trainer-our-information hidden w-full flex flex-col bg-white rounded-xl px-6 py-8 relative left-0 tabcontent holiInfo" id="holidays">
+                <div class="about-trainer-info">
+                    <div class="title-trainer">
+                        <p class="font-medium text-xl mb-1">Мое профессиональное развитие</p>
+                        <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
+                        </svg>
+                    </div>
+
+                    <ul class="flex flex-col mt-3">
+                        <li> - Сертификат «Предметно-языковое обучение CLIL» Астана, 2017 год;</li>
+                        <li> - Сертификат «PISA разработка заданий» Астана, 2018 год;</li>
+                        <li> - Сертификат «Казахстанский тренер: опыт, сотрудничество и перспективы», Астана,2018 год;</li>
+                    </ul>
+                </div>
+
+                <div class="about-trainer-info mt-5">
+                    <div class="title-trainer">
+                        <p class="font-medium text-xl mb-1">Мои публикации</p>
+                        <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
+                        </svg>
+                    </div>
+
+                    <p class="mt-2 text-base font-normal">Статья «О профессиональных компетенциях будущих педагогов начальных классов» Вестник Евразийского национального университета им. Л.Гумилева, г.Нур-Султан, 2021 год; </p>
+                </div>
+
+
+                <div class="about-trainer-info mt-5">
+                    <div class="title-trainer">
+                        <p class="font-medium text-xl mb-1">Мои награды</p>
+                        <svg width="40" height="1" viewBox="0 0 40 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="40" y2="0.5" stroke="black"/>
+                        </svg>
+                    </div>
+
+                    <ul class="flex flex-col mt-3">
+                        <li> - Сертификат «Предметно-языковое обучение CLIL» Астана, 2017 год;</li>
+                        <li> - Сертификат «PISA разработка заданий» Астана, 2018 год;</li>
+                        <li> - Сертификат «Казахстанский тренер: опыт, сотрудничество и перспективы», Астана,2018 год;</li>
+                    </ul>
+
+                </div>
+
+                
+
+            </div>
+        </div>
+        </div>
+    </div>
+ </div>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+ <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+ <script>
+    $(document).ready(function(){
+
+        $('.course-slider').slick({
+                        infinite: false,
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        autoplaySpeed: 3000,
+                        dots:true,
+                        arrows:false,
+                        autoplay:false,  
+                        responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrow:false,
+                        autoplay:true,  
+                        //autoplay:true,
+                        },
+                    },
+                        {
+                        breakpoint: 1025,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrow:false,
+                        autoplay:true,  
+                        //autoplay:true,
+                        },
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrow:false,
+                        autoplay:true,  
+                        //autoplay:true,
+                    },
+                    },
+            ]
+        });
+
+        $(".prev-btns").click(function () {
+                    $('.course-slider').slick("slickPrev");
+                });
+
+                $(".next-btns").click(function () {
+                    $('.course-slider').slick("slickNext");
+                });
+
+                $(".prev-btns").addClass("slick-disabled");
+                $('.course-slider').on("afterChange", function (event, slick, currentSlide) {
+                    if (currentSlide === 0) {
+                        $(".prev-btns").addClass("slick-disabled");
+                    } else {
+                        $(".prev-btns").removeClass("slick-disabled");
+                    }
+
+                    if ($(".slick-next").hasClass("slick-disabled")) {
+                        $(".next-btns").addClass("slick-disabled");
+                    } else {
+                        $(".next-btns").removeClass("slick-disabled");
+                    }
+                });
+
+
+                    $('.seminar-slider').slick({
+                        infinite: false,
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        autoplaySpeed: 3000,
+                        dots:true,
+                        arrows:false,
+                        autoplay:false,  
+                        responsive: [
+                        {
+                            breakpoint: 1025,
+                            settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrow:false,
+                            autoplay:true,  
+                            //autoplay:true,
+                        }
+                        },
+                        {
+                            breakpoint: 575,
+                            settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrow:false,
+                            //autoplay:true,
+                        }
+                        },
+            ]
+        });
+
+        $(".prev-btn").click(function () {
+                    $('.seminar-slider').slick("slickPrev");
+                });
+
+                $(".next-btn").click(function () {
+                    $('.seminar-slider').slick("slickNext");
+                });
+
+                $(".prev-btn").addClass("slick-disabled");
+                $('.seminar-slider').on("afterChange", function (event, slick, currentSlide) {
+                    if (currentSlide === 0) {
+                        $(".prev-btn").addClass("slick-disabled");
+                    } else {
+                        $(".prev-btn").removeClass("slick-disabled");
+                    }
+
+                    if ($(".slick-next").hasClass("slick-disabled")) {
+                        $(".next-btn").addClass("slick-disabled");
+                    } else {
+                        $(".next-btn").removeClass("slick-disabled");
+                    }
+                });
+
+                let mainInfo = document.querySelector('.mainInfo');
+                let holiInfo = document.querySelector('.holiInfo');
+                let mainBtn = document.querySelector('.main');
+                let holiBtn = document.querySelector('.holi');
+                mainBtn.onclick = function() {
+                    openTab(mainInfo, mainBtn);
+                }
+
+                holiBtn.onclick = function() {
+                    openTab(holiInfo, holiBtn);
+                }
+
+                function openTab(tabContent, tabButton) {
+                    let i, tabcontents, tablinks;
+
+                    tabcontents = document.querySelectorAll('.tabcontent');
+                    for (i = 0; i < tabcontents.length; i++) {
+                        tabcontents[i].style.display = 'none';
+                    }
+
+                    tablinks = document.querySelectorAll('.tablinks');
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].classList.remove("active");
+                    }
+
+                    tabContent.style.display = "block";
+                    tabButton.classList.add("active");
+                }
+
+    })
+
+    
+
+</script>
+</body>
+</html>
